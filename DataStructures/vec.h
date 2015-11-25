@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <iterator>
 
 template <class T>
 class vec {
