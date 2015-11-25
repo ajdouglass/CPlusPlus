@@ -1,6 +1,4 @@
-/* Andrew Douglass *
- * 
- * Vector class designed with many different 
+/* Vector class designed with many different 
  * useful functions. It is designed for use in
  * many applications and different functions can 
  * be removed to best suit the needs of the project
