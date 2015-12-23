@@ -296,7 +296,7 @@ T& vec<T>::pop_end() {
     if(Size == 0)
         throw std::range_error("Vector is empty");
     Size--;
-    return elem[Size+1];
+    return elem[Size];
 }
 
 /* - Swap the elements at loc1 and loc2 -
