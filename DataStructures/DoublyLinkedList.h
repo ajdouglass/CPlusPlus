@@ -24,7 +24,7 @@ public:
         { return prev; }
 private:
     T obj;
-    Node<T>* prev, next;
+    Node<T> *prev, *next;
     friend class DoublyLinkedList<T>;
 };
 
