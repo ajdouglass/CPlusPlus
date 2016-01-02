@@ -1,3 +1,5 @@
+/* Binary Tree Data Structure */
+
 #ifndef BINARYTREE_H
 #define BINARYTREE_H
 
@@ -61,6 +63,8 @@ public:
         { root = new TreeNode<T>(el); }
     ~BinaryTree()
         { deleteTree(root); root = NULL; }
+	BinaryTree(const BinaryTree& bt);
+	BinaryTree& operator=(const BinaryTree& bt);
     TreeNode<T>* getRoot() const
         { return root; }
     bool isEmpty() const
@@ -75,6 +79,17 @@ private:
     TreeNode<T>* root;
     void deleteTree(TreeNode<T>* root);
 };
+
+BinaryTree::BinaryTree(const BinaryTree& bt) {
+	root = new TreeNode<T>(bt.getRoot()->getElem());
+	root->copy();
+}
+
+BinaryTree& BinaryTree::operator=(const BinaryTree& bt) {
+	deleteTree(root);
+	root = new TreeNode<T>(bt.getRoot()->getElem());
+	root->copy(); 
+}
 
 template <class T>
 void BinaryTree<T>::merge(T el, BinaryTree<T>& lt, BinaryTree<T>& rt) {
