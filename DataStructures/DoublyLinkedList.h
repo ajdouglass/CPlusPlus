@@ -35,10 +35,10 @@ template <class T> class DoublyLinkedList {
 public:
     DoublyLinkedList() 
         :header(NULL), trailer(NULL), numNodes(0) { }
-    DoublyLinkedList(const DoublyLinkedList& dll);
+    DoublyLinkedList(const DoublyLinkedList<T>& dll);
     ~DoublyLinkedList()
         { deleteList(); } 
-    DoublyLinkedList& operator=(const DoublyLinkedList& dll);
+    DoublyLinkedList<T>& operator=(const DoublyLinkedList<T>& dll);
     void deleteList();
     Node<T>* getFirst() const
         { return header; }
