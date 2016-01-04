@@ -17,7 +17,9 @@ class Node {
 public:
     Node(T k=T(), Node<T>* p=NULL, Node<T>* n=NULL)
         :obj(k), prev(p), next(n) { }
-    T getElem() const
+    T& getElem() const
+        { return obj; }
+    T& getElem() 
         { return obj; }
     Node<T>* getNext() const
         { return next; }
