@@ -25,6 +25,7 @@ public:
 
     bool contains(T item) const;
     void resize(int r, int c);
+    void clear();
 private:
     int ROWS, COLS;
     T** matrix;
@@ -147,6 +148,15 @@ void Matrix<T>::resize(int r, int c) {
     matrix = p;
     ROWS = r;
     COLS = c;
+}
+
+template <class T>
+void Matrix<T>::clear() {
+	for(int r = 0; r < ROWS; r++) {
+		for(int c = 0; c < COLS; c++) {
+			matrix[r][c] = T();
+		}
+	}
 }
 
 template <class T>
