@@ -149,9 +149,7 @@ T& vec<T>::at(int p) const {
  * memory to be able to store this element. */
 template <class T>
 void vec<T>::push_back(T a) {
-    if(Capacity == 0)
-        reserve(8);
-    else if(Size == Capacity)
+    if(Size == Capacity)
         reserve(2*Capacity);
     elem[Size] = a;
     ++Size;
