@@ -87,7 +87,7 @@ template <class T>
 vec<T>::vec(int s)
     :Size(0), Capacity(s), elem(new T[Capacity]) 
 {
-    for(int i = 0; i < Size; ++i)
+    for(int i = 0; i < Capacity; ++i)
         elem[i] = T();
 }
 
