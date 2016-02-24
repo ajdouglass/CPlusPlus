@@ -96,7 +96,7 @@ vec<T>::vec(int s)
  * vector. */
 template <class T>
 vec<T>::vec(const vec<T>& v) 
-    :Size(v.Size), Capacity(v.Capacity), elem(new T[v.Size])
+    :Size(v.Size), Capacity(v.Capacity), elem(new T[v.Capacity])
 {
     for(int i = 0; i < v.Size; i++)
         elem[i] = v.elem[i];
